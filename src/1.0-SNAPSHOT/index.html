@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+ 
+  <meta charset="utf-8"/>
+
+  <title>1.0-SNAPSHOT</title>
+  
+  <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+  <script type="text/javascript" src="js/greyshine.jslib-1.0-SNAPSHOT.js"></script>
+  
+  <script type="text/javascript">
+  
+  	$(document).ready( function() { 
+  		
+  		if ( 'OK' !== testvalue ) {
+  		
+  			alert( 'testfail' );
+  		}
+  		
+  	});
+  
+  </script>
+  
+  </head>
+  
+  <body>
+  
+  	<h1>1.0-SNAPSHOT</h1>
+  	
+  	<hr/>
+  	
+  		<div>
+  			<a href="#" onclick="greyshine.jslib.toggleGroup('div#show1');">SHOW 1</a>
+  			<a href="#" onclick="greyshine.jslib.toggleGroup('div#show2');">SHOW 2</a>
+  			<a href="#" onclick="greyshine.jslib.toggleGroup('div#show3');">SHOW 3</a>
+  		</div>
+  	
+  		<div data-toggle-group="shows" id="show1" >ONE</div>
+  		<div data-toggle-group="shows"  id="show2">TWO</div>
+  		<div data-toggle-group="shows"  id="show3">THREE</div>
+  	
+  	<hr/>
+  	
+  	<div data-htmlload="htmlload-parts/div1.html"><!-- content will be appended --></div>
+  	<div data-htmlload="htmlload-parts/div2.html"><!-- content will be appended --></div>
+  	
+  	<hr/>
+  	
+  
+  </body>
+  
+</html>
