@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+ 
+  <meta charset="utf-8"/>
+
+  <title>1.0-SNAPSHOT</title>
+  
+  <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+  <script type="text/javascript" src="js/greyshine.jqp.inputfile-1.0.js"></script>
+  
+  <script type="text/javascript">
+  
+  	$(document).ready( function() { 
+  		
+	  		var handle = function(inBase64, inFile) {
+	  			
+	  			$('#imageContainer').append('<hr/>' );
+				$('#imageContainer').append('<div>file: '+ inFile.name +'</div>' );
+				$('#imageContainer').append( $('<img src="" alt="" style="width:90%; margin:0 auto;"/>').attr('src', inBase64).attr('alt',inFile.name) );
+	  		};
+				
+			$('input.fileupload').fileSelected( handle );
+			
+			$('div#droptarget').fileDropped( handle );
+			
+  	} );
+  
+  </script>
+  
+  </head>
+  
+  <body>
+  		<input id="fileupload1" class="fileupload" type="file" />
+  		<input id="fileupload2" class="fileupload" type="file" multiple />
+  		<div id="droptarget" style="height: 50px; border-radius: 10px; background-color: green;margin: 10px; padding:10px;">
+  			Drop Target
+  		</div>
+  		<div id="imageContainer"></div>
+  </body>
+  
+</html>
